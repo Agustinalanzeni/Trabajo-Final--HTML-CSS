@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@300;500;600&family=Lexend+Deca:wght@400;500&display=swap');
+
+@mixin font1 {
+    font-family: 'DM Serif Display', serif;
+}
+@mixin font2 {
+    font-family: 'Jost', sans-serif;
+}
+@mixin font3 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$celeste: #CEF2DE;
+$amarillo: #F2C063;
+$amarillo-suave: #eccc91;
+$rosa-suave: #F2DBCE;
+$rosa-fuerte: #F2A391;
+$gris: #F8F7F5;
+
+h1 {
+    display: none;
+}
+
+header {
+    background-color: #CEF2DE;
+    margin: 0%;
+}
+
+.logo {
+    width: 40%;
+    display: block;
+    margin: auto;
+    padding-top: 2%;
+}
+
+ul {
+    text-align: center;
+    margin-top: 2%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background-color: $rosa-suave;
+    li {
+        display: inline;
+        font-size: 1em;
+        font-weight: 600;
+        padding: 1% 8%;
+        a {
+            text-decoration: none;
+            @include font2();
+            color: rgb(119, 119, 119);
+            &:hover {
+                font-weight: 700;
+                color: black;
+                border-bottom: black solid 3px;
+            }
+        }
+    }
+}
+
+.flyer {
+    display: flex;
+    background-color: $rosa-fuerte;
+    img {
+        width: 40%;
+        margin-left: 5%;
+    }
+    .contenedorFlyer {
+        margin: 8% 8%;
+        h2 {
+            @include font1();
+            display: inline;
+            background-color: $amarillo;
+            font-size: 4em;
+        } 
+        p {
+            @include font2()
+            padding-top: 10%;
+            font-size: 1.2em;
+        }
+    }
+}
+
+.tituloCategorias {
+    font-size: 2em;
+    @include font2();
+    font-weight: 300;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: $celeste;
+    text-decoration-thickness: 5px;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.categorias {
+    display: flex;
+    margin: 0 0 0 2%;
+    height: 500px;
+    .skincare {
+        position: relative;
+        width: 48%;
+        .imagenSkincare {
+            padding: 0;
+            width: 20%;
+            position: absolute;
+            top: 0;
+            bottom: 10%;
+            left: 15%;
+            width: 50%;
+            z-index: 1;
+            border: $gris 10px solid;
+        }
+        h3 {
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            z-index: 10;
+            font-size: 2em;
+            @include font2();
+            background-color: $celeste;
+        }
+        p {
+            position: absolute;
+            width: 25%;
+            text-align: justify;
+            text-align: center;
+            top: 25%;
+            right: 15%;
+            z-index: 10;
+            font-size: 1em;
+            @include font2();
+            background-color: $rosa-fuerte;
+        }
+        button {
+            position: absolute;
+            bottom: 8%;
+            right: 45%;
+            z-index: 20;
+            padding: 2%;
+            font-size: 1.2em;
+            color: $gris;
+            background-color: black;
+            border: none;
+            &:hover {
+                cursor: pointer;
+                background-color: $amarillo-suave;
+                color: black;
+            }
+        }
+    }
+    .makeup {
+        position: relative;
+        width: 48%;
+        .imagenMakeup {
+            padding: 0;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            left: 10%;
+            bottom: 10%;
+            width: 50%;
+            z-index: 1;
+            border: $gris 10px solid;
+        }
+        h3 {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            z-index: 10;
+            font-size: 2em;
+            @include font2();
+            background-color: $celeste;
+        }
+        p {
+            position: absolute;
+            width: 30%;
+            text-align: justify;
+            top: 25%;
+            right: 10%;
+            z-index: 10;
+            font-size: 1em;
+            @include font2();
+            background-color: $rosa-fuerte;
+        };
+        button {
+            position: absolute;
+            bottom: 8%;
+            right: 50%;
+            z-index: 20;
+            padding: 2%;
+            font-size: 1.2em;
+            color: $gris;
+            background-color: black;
+            border: none;
+            &:hover {
+                cursor: pointer;
+                background-color: $amarillo-suave;
+                color: black;
+            }
+        }
+    }
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    background-color: $gris;
+    margin: 5% 0;
+    .productosDestacados {
+        width: 70%;
+        background-color: $gris;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .producto {
+            width: 40%;
+            padding: 2%;
+            .imagenproducto {
+                width: 70%;
+                border: $rosa-suave 10px solid;
+            }
+            .nombreProducto {
+                padding: 3% 0;
+                width: 75%;
+                @include font2();
+                font-weight: 300;
+            }
+            button {
+                padding: 3% 10%;
+                margin-left: 15%;
+                background-color: $celeste;
+                border: none;
+                @include font2();
+                font-size: 1em;
+                &:hover {
+                    background-color: $rosa-fuerte;
+                    color: $gris;
+                }
+            } 
+        }
+    }
+    .cajapequeña {
+        width: 60%;
+        position: relative;
+        background-color: $celeste;
+        .tituloProductos {
+            position: absolute;
+            top: 2%;
+            left: 13%;
+            z-index: 20;
+            @include font1();
+            display: block;
+            font-size: 3em;
+            background-color: $rosa-fuerte;
+        }
+        .imagenModelo {
+            position: absolute;
+            bottom: 5%;
+            left: 8%;
+            border: $gris solid 10px;
+            height: 80%;
+        }
+    }
+}
+
+.ventajas {
+    font-size: 2em;
+    @include font2();
+    font-weight: 300;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: $celeste;
+    text-decoration-thickness: 5px;
+    margin-top: 3%;
+}
+
+.contenedor2 {
+    display: flex;
+    justify-content: space-around;
+    background-color: $rosa-fuerte;
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: 35px;
+    .contenedorIconos {
+        position: relative;
+        width: 70%;
+        height: 100%;
+        padding: 2%;
+        .iconos {
+            position: absolute;
+            top: 0;
+            
+            padding: 5%;
+            width: 50%;
+            height: auto;
+        }
+        .icono2 {
+            position: absolute;
+            top: 3;
+            width: 50%;
+            left: 25%;
+            padding: 5%;
+        }
+        .textoIconos {
+            position: absolute;
+            top: 60%;
+            left: 15%;
+            @include font2();
+            font-size: 1.2em;
+            background-color: $amarillo;
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    padding: 5%;
+    background-color: rgb(128, 126, 126);
+    .contenedor3 {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        a img {
+            height: 100%;
+        }
+        .redesSociales {
+            padding-top: 20%;
+            .titulosfooter {
+                margin-bottom: 2%;
+                @include font2();
+                font-size: 1.2em;
+                color: $gris;
+                border-bottom: $gris solid 3px;
+            }
+            .instagram {
+                display: flex;
+                padding-bottom: 5%;
+                padding-top: 2%;
+                a {
+                    width: 20%;
+                    height: 80%;
+                    img {
+                        width: 50%;
+                    }
+                }
+                p {
+                    @include font2();
+                    font-size: 1em;
+                    color: $gris;
+                    
+                }
+            }
+            .facebook {
+                display: flex;
+                padding-bottom: 5%;
+                a {
+                    width: 20%;
+                    height: 50%;
+                    img {
+                        width: 50%;
+                    }
+                }
+                p {
+                    @include font2();
+                    font-size: 1em;
+                    color: $gris;
+                }
+            }
+            .twitter {
+                display: flex;
+                padding-bottom: 5%;
+                a {
+                    width: 20%;
+                    height: 50%;
+                    img {
+                        width: 50%;
+                    }
+                }
+                p {
+                    @include font2();
+                    font-size: 1em;
+                    color: $gris;
+                }
+            }
+        }     
+    }
+    .linksRapidos {
+        width: 30%;
+        .link {
+            display: block;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 600;
+            padding: 4% 8%;
+            a {
+                text-decoration: none;
+                @include font2();
+                color: $gris;
+                &:hover {
+                    font-weight: 700;
+                    color: $gris;
+                    border-bottom: $gris solid 3px;
+                }
+            }
+        }
+    }
+    .location {
+        width: 30%;
+        .titulosfooter {
+            margin-bottom: 2%;
+            @include font2();
+            font-size: 1.2em;
+            color: $gris;
+            border-bottom: $gris solid 3px;
+        }
+        .locacion {
+            display: flex;
+            width: 100%;
+            padding-bottom: 5%;
+            img {
+                width: 7%;
+                height: 7%;
+                padding-right: 10%;
+                padding-top: 2%;
+            }
+            p {
+                width: 80%;
+                @include font2();
+                font-size: 1em;
+                color: $gris;
+            }  
+        }
+        .whatsup {
+            display: flex;
+            padding-top: 2%;
+            img {
+                padding-right: 10%;
+                width: 10%;
+            }
+            p {
+                @include font2();
+                font-size: 1em;
+                color: $gris;
+                padding-top: 2%;
+            }
+        }
+    }
+}

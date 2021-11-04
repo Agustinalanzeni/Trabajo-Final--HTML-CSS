@@ -1,0 +1,538 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@300;500;600&family=Lexend+Deca:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  display: none;
+}
+
+header {
+  background-color: #CEF2DE;
+  margin: 0%;
+}
+
+.logo {
+  width: 40%;
+  display: block;
+  margin: auto;
+  padding-top: 2%;
+}
+
+ul {
+  text-align: center;
+  margin-top: 2%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  background-color: #F2DBCE;
+}
+
+ul li {
+  display: inline;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 1% 8%;
+}
+
+ul li a {
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  color: #777777;
+}
+
+ul li a:hover {
+  font-weight: 700;
+  color: black;
+  border-bottom: black solid 3px;
+}
+
+.flyer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F2A391;
+}
+
+.flyer img {
+  width: 40%;
+  margin-left: 5%;
+}
+
+.flyer .contenedorFlyer {
+  margin: 8% 8%;
+}
+
+.flyer .contenedorFlyer h2 {
+  font-family: 'DM Serif Display', serif;
+  display: inline;
+  background-color: #F2C063;
+  font-size: 4em;
+}
+
+.flyer .contenedorFlyer p {
+  font-family: 'Jost', sans-serif;
+  padding-top: 10%;
+  font-size: 1.2em;
+}
+
+.tituloCategorias {
+  font-size: 2em;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #CEF2DE;
+          text-decoration-color: #CEF2DE;
+  text-decoration-thickness: 5px;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.categorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 0 2%;
+  height: 500px;
+}
+
+.categorias .skincare {
+  position: relative;
+  width: 48%;
+}
+
+.categorias .skincare .imagenSkincare {
+  padding: 0;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  bottom: 10%;
+  left: 15%;
+  width: 50%;
+  z-index: 1;
+  border: #F8F7F5 10px solid;
+}
+
+.categorias .skincare h3 {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  z-index: 10;
+  font-size: 2em;
+  font-family: 'Jost', sans-serif;
+  background-color: #CEF2DE;
+}
+
+.categorias .skincare p {
+  position: absolute;
+  width: 25%;
+  text-align: justify;
+  text-align: center;
+  top: 25%;
+  right: 15%;
+  z-index: 10;
+  font-size: 1em;
+  font-family: 'Jost', sans-serif;
+  background-color: #F2A391;
+}
+
+.categorias .skincare button {
+  position: absolute;
+  bottom: 8%;
+  right: 45%;
+  z-index: 20;
+  padding: 2%;
+  font-size: 1.2em;
+  color: #F8F7F5;
+  background-color: black;
+  border: none;
+}
+
+.categorias .skincare button:hover {
+  cursor: pointer;
+  background-color: #eccc91;
+  color: black;
+}
+
+.categorias .makeup {
+  position: relative;
+  width: 48%;
+}
+
+.categorias .makeup .imagenMakeup {
+  padding: 0;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  bottom: 10%;
+  width: 50%;
+  z-index: 1;
+  border: #F8F7F5 10px solid;
+}
+
+.categorias .makeup h3 {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  z-index: 10;
+  font-size: 2em;
+  font-family: 'Jost', sans-serif;
+  background-color: #CEF2DE;
+}
+
+.categorias .makeup p {
+  position: absolute;
+  width: 30%;
+  text-align: justify;
+  top: 25%;
+  right: 10%;
+  z-index: 10;
+  font-size: 1em;
+  font-family: 'Jost', sans-serif;
+  background-color: #F2A391;
+}
+
+.categorias .makeup button {
+  position: absolute;
+  bottom: 8%;
+  right: 50%;
+  z-index: 20;
+  padding: 2%;
+  font-size: 1.2em;
+  color: #F8F7F5;
+  background-color: black;
+  border: none;
+}
+
+.categorias .makeup button:hover {
+  cursor: pointer;
+  background-color: #eccc91;
+  color: black;
+}
+
+.contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #F8F7F5;
+  margin: 5% 0;
+}
+
+.contenedor .productosDestacados {
+  width: 70%;
+  background-color: #F8F7F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contenedor .productosDestacados .producto {
+  width: 40%;
+  padding: 2%;
+}
+
+.contenedor .productosDestacados .producto .imagenproducto {
+  width: 70%;
+  border: #F2DBCE 10px solid;
+}
+
+.contenedor .productosDestacados .producto .nombreProducto {
+  padding: 3% 0;
+  width: 75%;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+.contenedor .productosDestacados .producto button {
+  padding: 3% 10%;
+  margin-left: 15%;
+  background-color: #CEF2DE;
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+}
+
+.contenedor .productosDestacados .producto button:hover {
+  background-color: #F2A391;
+  color: #F8F7F5;
+}
+
+.contenedor .cajapequeña {
+  width: 60%;
+  position: relative;
+  background-color: #CEF2DE;
+}
+
+.contenedor .cajapequeña .tituloProductos {
+  position: absolute;
+  top: 2%;
+  left: 13%;
+  z-index: 20;
+  font-family: 'DM Serif Display', serif;
+  display: block;
+  font-size: 3em;
+  background-color: #F2A391;
+}
+
+.contenedor .cajapequeña .imagenModelo {
+  position: absolute;
+  bottom: 5%;
+  left: 8%;
+  border: #F8F7F5 solid 10px;
+  height: 80%;
+}
+
+.ventajas {
+  font-size: 2em;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #CEF2DE;
+          text-decoration-color: #CEF2DE;
+  text-decoration-thickness: 5px;
+  margin-top: 3%;
+}
+
+.contenedor2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #F2A391;
+  width: 70%;
+  height: 200px;
+  margin: auto;
+  margin-top: 2%;
+  padding: 2%;
+  border-radius: 35px;
+}
+
+.contenedor2 .contenedorIconos {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  padding: 2%;
+}
+
+.contenedor2 .contenedorIconos .iconos {
+  position: absolute;
+  top: 0;
+  padding: 5%;
+  width: 50%;
+  height: auto;
+}
+
+.contenedor2 .contenedorIconos .icono2 {
+  position: absolute;
+  top: 3;
+  width: 50%;
+  left: 25%;
+  padding: 5%;
+}
+
+.contenedor2 .contenedorIconos .textoIconos {
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2em;
+  background-color: #F2C063;
+  text-align: center;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 5%;
+  padding: 5%;
+  background-color: #807e7e;
+}
+
+footer .contenedor3 {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .contenedor3 a img {
+  height: 100%;
+}
+
+footer .contenedor3 .redesSociales {
+  padding-top: 20%;
+}
+
+footer .contenedor3 .redesSociales .titulosfooter {
+  margin-bottom: 2%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2em;
+  color: #F8F7F5;
+  border-bottom: #F8F7F5 solid 3px;
+}
+
+footer .contenedor3 .redesSociales .instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 5%;
+  padding-top: 2%;
+}
+
+footer .contenedor3 .redesSociales .instagram a {
+  width: 20%;
+  height: 80%;
+}
+
+footer .contenedor3 .redesSociales .instagram a img {
+  width: 50%;
+}
+
+footer .contenedor3 .redesSociales .instagram p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+}
+
+footer .contenedor3 .redesSociales .facebook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 5%;
+}
+
+footer .contenedor3 .redesSociales .facebook a {
+  width: 20%;
+  height: 50%;
+}
+
+footer .contenedor3 .redesSociales .facebook a img {
+  width: 50%;
+}
+
+footer .contenedor3 .redesSociales .facebook p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+}
+
+footer .contenedor3 .redesSociales .twitter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 5%;
+}
+
+footer .contenedor3 .redesSociales .twitter a {
+  width: 20%;
+  height: 50%;
+}
+
+footer .contenedor3 .redesSociales .twitter a img {
+  width: 50%;
+}
+
+footer .contenedor3 .redesSociales .twitter p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+}
+
+footer .linksRapidos {
+  width: 30%;
+}
+
+footer .linksRapidos .link {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 4% 8%;
+}
+
+footer .linksRapidos .link a {
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  color: #F8F7F5;
+}
+
+footer .linksRapidos .link a:hover {
+  font-weight: 700;
+  color: #F8F7F5;
+  border-bottom: #F8F7F5 solid 3px;
+}
+
+footer .location {
+  width: 30%;
+}
+
+footer .location .titulosfooter {
+  margin-bottom: 2%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2em;
+  color: #F8F7F5;
+  border-bottom: #F8F7F5 solid 3px;
+}
+
+footer .location .locacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+footer .location .locacion img {
+  width: 7%;
+  height: 7%;
+  padding-right: 10%;
+  padding-top: 2%;
+}
+
+footer .location .locacion p {
+  width: 80%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+}
+
+footer .location .whatsup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2%;
+}
+
+footer .location .whatsup img {
+  padding-right: 10%;
+  width: 10%;
+}
+
+footer .location .whatsup p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+  padding-top: 2%;
+}
+/*# sourceMappingURL=style.css.map */
