@@ -39,6 +39,37 @@ header {
     padding-top: 2%;
 }
 
+.menu {
+    width: 90%;
+    position: relative;
+    display: none;
+    margin-left: auto;
+    i {
+        position: absolute;
+        top: -60px;
+        right: 0;
+        color: $rosa-fuerte;
+    }
+    .dropdown {
+        display: none;
+        width: 30%;
+        position: absolute;
+        background-color: $rosa-suave;
+        padding: 25px 16px;
+        z-index: 5;
+        top: -40px;
+        right: -3px;
+        li {
+            display: block;
+            padding: 7% 0;
+        }
+    }
+    &:hover .dropdown {
+        display: block;
+    }
+}
+
+
 ul {
     text-align: center;
     margin-top: 2%;
@@ -100,48 +131,40 @@ ul {
 
 .categorias {
     display: flex;
-    margin: 0 0 0 2%;
-    height: 500px;
     .skincare {
-        position: relative;
-        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
         .imagenSkincare {
-            padding: 0;
-            width: 20%;
-            position: absolute;
-            top: 0;
-            bottom: 10%;
-            left: 15%;
-            width: 50%;
-            z-index: 1;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2%;
+            width: 60%;
             border: $gris 10px solid;
         }
-        h3 {
-            position: absolute;
-            top: 10%;
-            right: 15%;
-            z-index: 10;
+        .subtitulocategorias {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2%;
             font-size: 2em;
             @include font2();
             background-color: $celeste;
         }
         p {
-            position: absolute;
-            width: 25%;
+            width: 50%;
+            margin: auto;
             text-align: justify;
             text-align: center;
-            top: 25%;
-            right: 15%;
-            z-index: 10;
             font-size: 1em;
             @include font2();
             background-color: $rosa-fuerte;
         }
         button {
-            position: absolute;
-            bottom: 8%;
-            right: 45%;
-            z-index: 20;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+            width: 30%;
             padding: 2%;
             font-size: 1.2em;
             color: $gris;
@@ -155,44 +178,39 @@ ul {
         }
     }
     .makeup {
-        position: relative;
-        width: 48%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .imagenMakeup {
-            padding: 0;
-            width: 50%;
-            position: absolute;
-            top: 0;
-            left: 10%;
-            bottom: 10%;
-            width: 50%;
-            z-index: 1;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2%;
+            width: 60%;
             border: $gris 10px solid;
         }
-        h3 {
-            position: absolute;
-            top: 10%;
-            right: 10%;
-            z-index: 10;
+        .subtitulocategorias {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2%;
             font-size: 2em;
             @include font2();
             background-color: $celeste;
         }
         p {
-            position: absolute;
-            width: 30%;
+            width: 50%;
+            margin: auto;
             text-align: justify;
-            top: 25%;
-            right: 10%;
-            z-index: 10;
+            text-align: center;
             font-size: 1em;
             @include font2();
             background-color: $rosa-fuerte;
         };
         button {
-            position: absolute;
-            bottom: 8%;
-            right: 50%;
-            z-index: 20;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+            width: 30%;
             padding: 2%;
             font-size: 1.2em;
             color: $gris;
@@ -209,20 +227,19 @@ ul {
 
 .contenedor {
     display: flex;
-    justify-content: space-between;
     background-color: $gris;
     margin: 5% 0;
     .productosDestacados {
-        width: 70%;
+        width: 50%;
         background-color: $gris;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
         .producto {
             width: 40%;
+            margin: 0 2%;
             padding: 2%;
             .imagenproducto {
-                width: 70%;
+                width: 80%;
                 border: $rosa-suave 10px solid;
             }
             .nombreProducto {
@@ -246,7 +263,7 @@ ul {
         }
     }
     .cajapequeña {
-        width: 60%;
+        width: 50%;
         position: relative;
         background-color: $celeste;
         .tituloProductos {
@@ -262,11 +279,15 @@ ul {
         .imagenModelo {
             position: absolute;
             bottom: 5%;
-            left: 8%;
+            left: 10%;
             border: $gris solid 10px;
             height: 80%;
         }
     }
+}
+
+.contenedorFlex {
+    display: none;
 }
 
 .ventajas {
@@ -319,6 +340,73 @@ ul {
             background-color: $amarillo;
             text-align: center;
         }
+    }
+}
+
+.ofertas {
+    position: relative;
+    background-color: $rosa-suave;
+    margin-top: 15%;
+    padding: 23% 0;
+    .textos {
+        
+    }
+    .imagen1 {
+            position: absolute;
+            top: -10%;
+            left: 35%;
+            width: 25%;
+            z-index: 2;
+            border: $gris solid 10px;
+    }
+    .imagen2 {
+            width: 25%;
+            position: absolute;
+            top: 30%;
+            left: 15%;
+    }
+    .imagen3 {
+        position: absolute;
+        top: 10%;
+        left: 60%;
+        width: 30%;
+    }
+    .titulobanner {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        @include font1();
+        font-size: 5em;
+        color: $gris;
+        background-color: $amarillo;
+        z-index: 200;
+    }
+    .textobanner {
+        z-index: 20;
+        display: inline;
+        width: 25%;
+        position: absolute;
+        top: 58%;
+        left: 45%;
+        @include font1();
+        font-size: 2.5em;
+        text-align: center;
+        color: $gris;
+        background-color: $amarillo;
+    }
+    .botonbanner {
+        z-index: 25;
+        position: absolute;
+        top: 72%;
+        left: 75%;
+        padding: 1%;
+        @include font2();
+        font-size: 1.5em;
+        color: $gris;
+        text-align: center;
+        background-color: black;
+        border: none;
+        cursor: pointer;
     }
 }
 
@@ -454,6 +542,439 @@ footer {
                 font-size: 1em;
                 color: $gris;
                 padding-top: 2%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .flyer {
+        img {
+            width: 30%;
+            height: 70%;
+            margin-top: 1%;
+        }
+        .contenedorFlyer {
+            h2 {
+                font-size: 2.5em;
+            }
+            p {
+                padding-top: 5%;
+                font-size: 1em;
+            }
+        }
+    }
+    .skincare {
+        width: 40%;
+    }
+    .makeup {
+        width: 40%;
+    }
+    .contenedor {
+        .productosDestacados {
+            .producto {
+                width: 42%;
+                .nombreProducto {
+                    width: 90%;
+                }
+            }
+        }
+        .cajapequeña {
+            .tituloProductos {
+                width: 60%;
+                font-size: 3em;
+                text-align: center;
+            }
+            .imagenModelo {
+                height: 63%;
+                bottom: 10%;
+            }
+        }
+    }
+    .ofertas {
+        .titulobanner {
+            font-size: 3.5em;
+            left: 5%;
+        }
+        .textobanner {
+            font-size: 1.5em;
+            top: 65%;
+            left: 40%;
+        }
+        .imagen1 {
+            left: 32%;
+        }
+        .imagen2 {
+            left: 10%;
+        }
+        .imagen3 {
+            left: 57%;
+        }
+        .botonbanner {
+            left: 70%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        ul {
+            li {
+                padding: 1% 4%;
+            }
+        }
+    }
+
+    .flyer {
+        .contenedorFlyer {
+            h2 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 0.8em;
+            }
+        }
+    }
+    .tituloCategorias {
+        font-size: 1.5em;
+    }
+    .categorias {
+        .skincare {
+            .subtitulocategorias {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.8em;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2%;
+                margin-bottom: 2%;
+            }
+            button {
+                width: 45%;
+                font-size: 1em;
+            }
+        }
+        .makeup {
+            .subtitulocategorias {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.8em;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                width: 62%;
+            }
+            button {
+                width: 45%;
+                font-size: 1em;
+            }
+        }
+    }
+    .contenedor {
+        .productosDestacados {
+            width: 60%;
+            .producto {
+                .nombreProducto {
+                    font-size: 1em;
+                }
+                button {
+                    margin-left: 5%;
+                }
+            }
+        }
+        .cajapequeña {
+            .tituloProductos {
+                font-size: 2em;
+                left: 20%;
+            }
+            .imagenModelo {
+                height: 58%;
+                bottom: 20%;
+                left: 5%;
+            }
+        }
+    }
+    .ventajas {
+        font-size: 1.5em;
+    }
+    .contenedor2 {
+        height: 150px;
+        padding: 2% 5%;
+        .contenedorIconos {
+            height: 100%;
+            .textoIconos {
+                font-size: 1em;
+                left: 5%;
+                top: 50%;
+            }
+        }
+    }
+
+    footer {
+        .contenedor3 {
+            a {
+                img {
+                    height: 80%;
+                }
+            }
+            .redesSociales {
+                .instagram, .facebook, .twitter {
+                    a {
+                        img {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+        .location {
+            .locacion {
+                img {
+                    width: 10%;
+                }
+            }
+            .whatsup {
+                img {
+                    width: 12%;
+                    height: 12%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        display: inline-block;
+    }
+    nav {
+        display: none;
+    }
+    .flyer {
+        img {
+            margin-left: 2%;
+        }
+        .contenedorFlyer {
+            margin: 3% 2%;
+            h2 {
+                font-size: 1.2em;
+            }
+            p {
+                font-size: 0.8em;
+            }
+        }
+    }
+    .categorias {
+        margin-top: 5%;
+        .skincare {
+            .imagenSkincare {
+                width: 70%;
+            }
+            p {
+                width: 78%;
+            }
+            button {
+                width: 65%;
+                padding: 3% 0;
+            }
+        }
+        .makeup {
+            .imagenMakeup {
+                width: 70%;
+            }
+            p {
+                width: 80%;
+            }
+            button {
+                width: 65%;
+                padding: 3% 0;
+            }
+        }
+    }
+    .contenedor {
+        display: none;
+    }
+    .contenedorFlex {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: $gris;
+        margin: 10% 0;
+        .productosDestacados2 {
+            background-color: $gris;
+            display: flex;
+            flex-wrap: wrap;
+            .producto2 {
+                width: 40%;
+                margin: 0 2%;
+                padding: 2%;
+                .imagenproducto2 {
+                    width: 100%;
+                    border: $rosa-suave 10px solid;
+                }
+                .nombreProducto2 {
+                    padding: 3% 0;
+                    width: 100%;
+                    @include font2();
+                    font-weight: 300;
+                }
+                button {
+                    padding: 3% 10%;
+                    margin-left: 15%;
+                    background-color: $celeste;
+                    border: none;
+                    @include font2();
+                    font-size: 1em;
+                    &:hover {
+                        background-color: $rosa-fuerte;
+                        color: $gris;
+                    }
+                } 
+            }
+        }
+        .cajapequeña2 {
+            padding-top: 5%;
+            background-color: $celeste;
+            .tituloProductos2 {
+                @include font1();
+                display: inline;
+                font-size: 1.8em;
+                background-color: $rosa-fuerte;
+                margin: 5% 20%;
+            }
+            .imagenModelo2 {
+                border: $gris solid 10px;
+                width: 70%;
+                margin: 5% 13%;
+            }
+        }
+    }
+    .ofertas {
+        .textos {
+            .titulobanner {
+                font-size: 2em;
+                left: 2%;
+                top: 6%;
+            }
+            .textobanner {
+                font-size: 1em;
+            }
+        }
+        .botonbanner {
+            font-size: 1em;
+        }
+        .imagen3 {
+            left: 60%;
+        }
+        .imagen1 {
+            left: 36%;
+        }
+        .imagen2 {
+            left: 13%;
+        }
+    }
+    .contenedor2 {
+        height: 110px;
+        width: 85%;
+        margin-top: 5%;
+        .contenedorIconos {
+            height: 90%;
+            .iconos {
+                width: 65%;
+            }
+            .icono2 {
+                width: 65%;
+            }
+            .textoIconos {
+                font-size: 0.8em;
+                top: 60%;
+                left: 3%;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        .contenedor3 {
+            width: 60%;
+            .redesSociales {
+                padding-top: 3%;
+                .titulosfooter {
+                    display: none;
+                }
+                .instagram {
+                    p {
+                        font-size: 0.8em;
+                    }
+                    a {
+                        width: 15%;
+                        padding-left: 0;
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+                .facebook {
+                    p {
+                        font-size: 0.8em;
+                    }
+                    a {
+                        width: 15%;
+                        padding-left: 0;
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+                .twitter {
+                    p {
+                        font-size: 0.8em;
+                    }
+                    a {
+                        width: 15%;
+                        padding-left: 0;
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .linksRapidos {
+            width: 31%;
+            .link {
+                padding: 10% 0;
+            }
+        }
+        .location {
+            width: 95%;
+            .titulosfooter {
+                font-size: 1em;
+            }
+            .locacion {
+                padding-bottom: 0;
+                img {
+                    width: 4%;
+                    padding-right: 7%;
+                    padding-top: 0;
+                    padding-bottom: 2%;
+                }
+                p {
+                    font-size: 0.8em;
+                }
+            }
+            .whatsup {
+                img {
+                    width: 6%;
+                    padding-right: 5%;
+                }
+                p {
+                    font-size: 0.8em;
+                    padding-top: 0;
+                }
             }
         }
     }

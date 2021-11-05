@@ -21,6 +21,40 @@ header {
   padding-top: 2%;
 }
 
+.menu {
+  width: 90%;
+  position: relative;
+  display: none;
+  margin-left: auto;
+}
+
+.menu i {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  color: #F2A391;
+}
+
+.menu .dropdown {
+  display: none;
+  width: 30%;
+  position: absolute;
+  background-color: #F2DBCE;
+  padding: 25px 16px;
+  z-index: 5;
+  top: -40px;
+  right: -3px;
+}
+
+.menu .dropdown li {
+  display: block;
+  padding: 7% 0;
+}
+
+.menu:hover .dropdown {
+  display: block;
+}
+
 ul {
   text-align: center;
   margin-top: 2%;
@@ -94,55 +128,54 @@ ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0 0 2%;
-  height: 500px;
 }
 
 .categorias .skincare {
-  position: relative;
-  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
 }
 
 .categorias .skincare .imagenSkincare {
-  padding: 0;
-  width: 20%;
-  position: absolute;
-  top: 0;
-  bottom: 10%;
-  left: 15%;
-  width: 50%;
-  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  width: 60%;
   border: #F8F7F5 10px solid;
 }
 
-.categorias .skincare h3 {
-  position: absolute;
-  top: 10%;
-  right: 15%;
-  z-index: 10;
+.categorias .skincare .subtitulocategorias {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
   font-size: 2em;
   font-family: 'Jost', sans-serif;
   background-color: #CEF2DE;
 }
 
 .categorias .skincare p {
-  position: absolute;
-  width: 25%;
+  width: 50%;
+  margin: auto;
   text-align: justify;
   text-align: center;
-  top: 25%;
-  right: 15%;
-  z-index: 10;
   font-size: 1em;
   font-family: 'Jost', sans-serif;
   background-color: #F2A391;
 }
 
 .categorias .skincare button {
-  position: absolute;
-  bottom: 8%;
-  right: 45%;
-  z-index: 20;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 30%;
   padding: 2%;
   font-size: 1.2em;
   color: #F8F7F5;
@@ -157,49 +190,51 @@ ul li a:hover {
 }
 
 .categorias .makeup {
-  position: relative;
-  width: 48%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .categorias .makeup .imagenMakeup {
-  padding: 0;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: 10%;
-  bottom: 10%;
-  width: 50%;
-  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  width: 60%;
   border: #F8F7F5 10px solid;
 }
 
-.categorias .makeup h3 {
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  z-index: 10;
+.categorias .makeup .subtitulocategorias {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
   font-size: 2em;
   font-family: 'Jost', sans-serif;
   background-color: #CEF2DE;
 }
 
 .categorias .makeup p {
-  position: absolute;
-  width: 30%;
+  width: 50%;
+  margin: auto;
   text-align: justify;
-  top: 25%;
-  right: 10%;
-  z-index: 10;
+  text-align: center;
   font-size: 1em;
   font-family: 'Jost', sans-serif;
   background-color: #F2A391;
 }
 
 .categorias .makeup button {
-  position: absolute;
-  bottom: 8%;
-  right: 50%;
-  z-index: 20;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 30%;
   padding: 2%;
   font-size: 1.2em;
   color: #F8F7F5;
@@ -217,33 +252,28 @@ ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   background-color: #F8F7F5;
   margin: 5% 0;
 }
 
 .contenedor .productosDestacados {
-  width: 70%;
+  width: 50%;
   background-color: #F8F7F5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .contenedor .productosDestacados .producto {
   width: 40%;
+  margin: 0 2%;
   padding: 2%;
 }
 
 .contenedor .productosDestacados .producto .imagenproducto {
-  width: 70%;
+  width: 80%;
   border: #F2DBCE 10px solid;
 }
 
@@ -269,7 +299,7 @@ ul li a:hover {
 }
 
 .contenedor .cajapequeña {
-  width: 60%;
+  width: 50%;
   position: relative;
   background-color: #CEF2DE;
 }
@@ -288,9 +318,13 @@ ul li a:hover {
 .contenedor .cajapequeña .imagenModelo {
   position: absolute;
   bottom: 5%;
-  left: 8%;
+  left: 10%;
   border: #F8F7F5 solid 10px;
   height: 80%;
+}
+
+.contenedorFlex {
+  display: none;
 }
 
 .ventajas {
@@ -351,6 +385,76 @@ ul li a:hover {
   font-size: 1.2em;
   background-color: #F2C063;
   text-align: center;
+}
+
+.ofertas {
+  position: relative;
+  background-color: #F2DBCE;
+  margin-top: 15%;
+  padding: 23% 0;
+}
+
+.ofertas .imagen1 {
+  position: absolute;
+  top: -10%;
+  left: 35%;
+  width: 25%;
+  z-index: 2;
+  border: #F8F7F5 solid 10px;
+}
+
+.ofertas .imagen2 {
+  width: 25%;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.ofertas .imagen3 {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  width: 30%;
+}
+
+.ofertas .titulobanner {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-family: 'DM Serif Display', serif;
+  font-size: 5em;
+  color: #F8F7F5;
+  background-color: #F2C063;
+  z-index: 200;
+}
+
+.ofertas .textobanner {
+  z-index: 20;
+  display: inline;
+  width: 25%;
+  position: absolute;
+  top: 58%;
+  left: 45%;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5em;
+  text-align: center;
+  color: #F8F7F5;
+  background-color: #F2C063;
+}
+
+.ofertas .botonbanner {
+  z-index: 25;
+  position: absolute;
+  top: 72%;
+  left: 75%;
+  padding: 1%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.5em;
+  color: #F8F7F5;
+  text-align: center;
+  background-color: black;
+  border: none;
+  cursor: pointer;
 }
 
 footer {
@@ -534,5 +638,378 @@ footer .location .whatsup p {
   font-size: 1em;
   color: #F8F7F5;
   padding-top: 2%;
+}
+
+@media (max-width: 1024px) {
+  .flyer img {
+    width: 30%;
+    height: 70%;
+    margin-top: 1%;
+  }
+  .flyer .contenedorFlyer h2 {
+    font-size: 2.5em;
+  }
+  .flyer .contenedorFlyer p {
+    padding-top: 5%;
+    font-size: 1em;
+  }
+  .skincare {
+    width: 40%;
+  }
+  .makeup {
+    width: 40%;
+  }
+  .contenedor .productosDestacados .producto {
+    width: 42%;
+  }
+  .contenedor .productosDestacados .producto .nombreProducto {
+    width: 90%;
+  }
+  .contenedor .cajapequeña .tituloProductos {
+    width: 60%;
+    font-size: 3em;
+    text-align: center;
+  }
+  .contenedor .cajapequeña .imagenModelo {
+    height: 63%;
+    bottom: 10%;
+  }
+  .ofertas .titulobanner {
+    font-size: 3.5em;
+    left: 5%;
+  }
+  .ofertas .textobanner {
+    font-size: 1.5em;
+    top: 65%;
+    left: 40%;
+  }
+  .ofertas .imagen1 {
+    left: 32%;
+  }
+  .ofertas .imagen2 {
+    left: 10%;
+  }
+  .ofertas .imagen3 {
+    left: 57%;
+  }
+  .ofertas .botonbanner {
+    left: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  header ul li {
+    padding: 1% 4%;
+  }
+  .flyer .contenedorFlyer h2 {
+    font-size: 1.8em;
+  }
+  .flyer .contenedorFlyer p {
+    font-size: 0.8em;
+  }
+  .tituloCategorias {
+    font-size: 1.5em;
+  }
+  .categorias .skincare .subtitulocategorias {
+    font-size: 1.5em;
+  }
+  .categorias .skincare p {
+    font-size: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .categorias .skincare button {
+    width: 45%;
+    font-size: 1em;
+  }
+  .categorias .makeup .subtitulocategorias {
+    font-size: 1.5em;
+  }
+  .categorias .makeup p {
+    font-size: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 62%;
+  }
+  .categorias .makeup button {
+    width: 45%;
+    font-size: 1em;
+  }
+  .contenedor .productosDestacados {
+    width: 60%;
+  }
+  .contenedor .productosDestacados .producto .nombreProducto {
+    font-size: 1em;
+  }
+  .contenedor .productosDestacados .producto button {
+    margin-left: 5%;
+  }
+  .contenedor .cajapequeña .tituloProductos {
+    font-size: 2em;
+    left: 20%;
+  }
+  .contenedor .cajapequeña .imagenModelo {
+    height: 58%;
+    bottom: 20%;
+    left: 5%;
+  }
+  .ventajas {
+    font-size: 1.5em;
+  }
+  .contenedor2 {
+    height: 150px;
+    padding: 2% 5%;
+  }
+  .contenedor2 .contenedorIconos {
+    height: 100%;
+  }
+  .contenedor2 .contenedorIconos .textoIconos {
+    font-size: 1em;
+    left: 5%;
+    top: 50%;
+  }
+  footer .contenedor3 a img {
+    height: 80%;
+  }
+  footer .contenedor3 .redesSociales .instagram a img, footer .contenedor3 .redesSociales .facebook a img, footer .contenedor3 .redesSociales .twitter a img {
+    width: 70%;
+  }
+  footer .location .locacion img {
+    width: 10%;
+  }
+  footer .location .whatsup img {
+    width: 12%;
+    height: 12%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    display: inline-block;
+  }
+  nav {
+    display: none;
+  }
+  .flyer img {
+    margin-left: 2%;
+  }
+  .flyer .contenedorFlyer {
+    margin: 3% 2%;
+  }
+  .flyer .contenedorFlyer h2 {
+    font-size: 1.2em;
+  }
+  .flyer .contenedorFlyer p {
+    font-size: 0.8em;
+  }
+  .categorias {
+    margin-top: 5%;
+  }
+  .categorias .skincare .imagenSkincare {
+    width: 70%;
+  }
+  .categorias .skincare p {
+    width: 78%;
+  }
+  .categorias .skincare button {
+    width: 65%;
+    padding: 3% 0;
+  }
+  .categorias .makeup .imagenMakeup {
+    width: 70%;
+  }
+  .categorias .makeup p {
+    width: 80%;
+  }
+  .categorias .makeup button {
+    width: 65%;
+    padding: 3% 0;
+  }
+  .contenedor {
+    display: none;
+  }
+  .contenedorFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    background-color: #F8F7F5;
+    margin: 10% 0;
+  }
+  .contenedorFlex .productosDestacados2 {
+    background-color: #F8F7F5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contenedorFlex .productosDestacados2 .producto2 {
+    width: 40%;
+    margin: 0 2%;
+    padding: 2%;
+  }
+  .contenedorFlex .productosDestacados2 .producto2 .imagenproducto2 {
+    width: 100%;
+    border: #F2DBCE 10px solid;
+  }
+  .contenedorFlex .productosDestacados2 .producto2 .nombreProducto2 {
+    padding: 3% 0;
+    width: 100%;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+  }
+  .contenedorFlex .productosDestacados2 .producto2 button {
+    padding: 3% 10%;
+    margin-left: 15%;
+    background-color: #CEF2DE;
+    border: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+  }
+  .contenedorFlex .productosDestacados2 .producto2 button:hover {
+    background-color: #F2A391;
+    color: #F8F7F5;
+  }
+  .contenedorFlex .cajapequeña2 {
+    padding-top: 5%;
+    background-color: #CEF2DE;
+  }
+  .contenedorFlex .cajapequeña2 .tituloProductos2 {
+    font-family: 'DM Serif Display', serif;
+    display: inline;
+    font-size: 1.8em;
+    background-color: #F2A391;
+    margin: 5% 20%;
+  }
+  .contenedorFlex .cajapequeña2 .imagenModelo2 {
+    border: #F8F7F5 solid 10px;
+    width: 70%;
+    margin: 5% 13%;
+  }
+  .ofertas .textos .titulobanner {
+    font-size: 2em;
+    left: 2%;
+    top: 6%;
+  }
+  .ofertas .textos .textobanner {
+    font-size: 1em;
+  }
+  .ofertas .botonbanner {
+    font-size: 1em;
+  }
+  .ofertas .imagen3 {
+    left: 60%;
+  }
+  .ofertas .imagen1 {
+    left: 36%;
+  }
+  .ofertas .imagen2 {
+    left: 13%;
+  }
+  .contenedor2 {
+    height: 110px;
+    width: 85%;
+    margin-top: 5%;
+  }
+  .contenedor2 .contenedorIconos {
+    height: 90%;
+  }
+  .contenedor2 .contenedorIconos .iconos {
+    width: 65%;
+  }
+  .contenedor2 .contenedorIconos .icono2 {
+    width: 65%;
+  }
+  .contenedor2 .contenedorIconos .textoIconos {
+    font-size: 0.8em;
+    top: 60%;
+    left: 3%;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .contenedor3 {
+    width: 60%;
+  }
+  footer .contenedor3 .redesSociales {
+    padding-top: 3%;
+  }
+  footer .contenedor3 .redesSociales .titulosfooter {
+    display: none;
+  }
+  footer .contenedor3 .redesSociales .instagram p {
+    font-size: 0.8em;
+  }
+  footer .contenedor3 .redesSociales .instagram a {
+    width: 15%;
+    padding-left: 0;
+  }
+  footer .contenedor3 .redesSociales .instagram a img {
+    width: 50%;
+  }
+  footer .contenedor3 .redesSociales .facebook p {
+    font-size: 0.8em;
+  }
+  footer .contenedor3 .redesSociales .facebook a {
+    width: 15%;
+    padding-left: 0;
+  }
+  footer .contenedor3 .redesSociales .facebook a img {
+    width: 50%;
+  }
+  footer .contenedor3 .redesSociales .twitter p {
+    font-size: 0.8em;
+  }
+  footer .contenedor3 .redesSociales .twitter a {
+    width: 15%;
+    padding-left: 0;
+  }
+  footer .contenedor3 .redesSociales .twitter a img {
+    width: 50%;
+  }
+  footer .linksRapidos {
+    width: 31%;
+  }
+  footer .linksRapidos .link {
+    padding: 10% 0;
+  }
+  footer .location {
+    width: 95%;
+  }
+  footer .location .titulosfooter {
+    font-size: 1em;
+  }
+  footer .location .locacion {
+    padding-bottom: 0;
+  }
+  footer .location .locacion img {
+    width: 4%;
+    padding-right: 7%;
+    padding-top: 0;
+    padding-bottom: 2%;
+  }
+  footer .location .locacion p {
+    font-size: 0.8em;
+  }
+  footer .location .whatsup img {
+    width: 6%;
+    padding-right: 5%;
+  }
+  footer .location .whatsup p {
+    font-size: 0.8em;
+    padding-top: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
