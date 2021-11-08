@@ -167,13 +167,16 @@ ul {
             width: 30%;
             padding: 2%;
             font-size: 1.2em;
-            color: $gris;
             background-color: black;
             border: none;
             &:hover {
                 cursor: pointer;
                 background-color: $amarillo-suave;
                 color: black;
+            }
+            a {
+                text-decoration: none;
+                color: $gris;
             }
         }
     }
@@ -213,13 +216,16 @@ ul {
             width: 30%;
             padding: 2%;
             font-size: 1.2em;
-            color: $gris;
             background-color: black;
             border: none;
             &:hover {
                 cursor: pointer;
                 background-color: $amarillo-suave;
                 color: black;
+            }
+            a {
+                text-decoration: none;
+                color: $gris;
             }
         }
     }
@@ -258,6 +264,10 @@ ul {
                 &:hover {
                     background-color: $rosa-fuerte;
                     color: $gris;
+                }
+                a {
+                    text-decoration: none;
+                    color: black;
                 }
             } 
         }
@@ -319,7 +329,6 @@ ul {
         .iconos {
             position: absolute;
             top: 0;
-            
             padding: 5%;
             width: 50%;
             height: auto;
@@ -402,11 +411,20 @@ ul {
         padding: 1%;
         @include font2();
         font-size: 1.5em;
-        color: $gris;
         text-align: center;
         background-color: black;
         border: none;
         cursor: pointer;
+        &:hover {
+            background-color: $gris;
+        }
+        a {
+            text-decoration: none;
+            color: $gris;
+            &:hover {
+                color: black;
+            }
+        }
     }
 }
 
@@ -542,6 +560,18 @@ footer {
                 font-size: 1em;
                 color: $gris;
                 padding-top: 2%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    header {
+        nav {
+            ul {
+                li {
+                    font-size: 1.5em;
+                }
             }
         }
     }
@@ -808,11 +838,12 @@ footer {
             flex-wrap: wrap;
             .producto2 {
                 width: 40%;
-                margin: 0 2%;
+                margin-left: 6%;
                 padding: 2%;
                 .imagenproducto2 {
-                    width: 100%;
+                    width: 70%;
                     border: $rosa-suave 10px solid;
+                    margin: 0 2%;
                 }
                 .nombreProducto2 {
                     padding: 3% 0;
@@ -846,8 +877,8 @@ footer {
             }
             .imagenModelo2 {
                 border: $gris solid 10px;
-                width: 70%;
-                margin: 5% 13%;
+                width: 50%;
+                margin: 5% 23%;
             }
         }
     }

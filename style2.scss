@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@300;500;600&family=Lexend+Deca:wght@400;500&display=swap');
+
+@mixin font1 {
+    font-family: 'DM Serif Display', serif;
+}
+@mixin font2 {
+    font-family: 'Jost', sans-serif;
+}
+@mixin font3 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$celeste: #CEF2DE;
+$amarillo: #F2C063;
+$amarillo-suave: #eccc91;
+$rosa-suave: #F2DBCE;
+$rosa-fuerte: #F2A391;
+$gris: #F8F7F5;
+
+h1 {
+    display: none;
+}
+
+header {
+    background-color: #CEF2DE;
+    margin: 0%;
+}
+
+.logo {
+    width: 40%;
+    display: block;
+    margin: auto;
+    padding-top: 2%;
+}
+
+.menu {
+    width: 90%;
+    position: relative;
+    display: none;
+    margin-left: auto;
+    i {
+        position: absolute;
+        top: -60px;
+        right: 0;
+        color: $rosa-fuerte;
+    }
+    .dropdown {
+        display: none;
+        width: 30%;
+        position: absolute;
+        background-color: $rosa-suave;
+        padding: 25px 16px;
+        z-index: 5;
+        top: -40px;
+        right: -3px;
+        li {
+            display: block;
+            padding: 7% 0;
+        }
+    }
+    &:hover .dropdown {
+        display: block;
+    }
+}
+
+
+ul {
+    text-align: center;
+    margin-top: 2%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background-color: $rosa-suave;
+    li {
+        display: inline;
+        font-size: 1em;
+        font-weight: 600;
+        padding: 1% 8%;
+        a {
+            text-decoration: none;
+            @include font2();
+            color: rgb(119, 119, 119);
+            &:hover {
+                font-weight: 700;
+                color: black;
+                border-bottom: black solid 3px;
+            }
+        }
+    }
+}
+
+.flyer {
+    background-color: $rosa-fuerte;
+    height: 400px;
+    margin: 5% 7%;
+    border-radius: 50px;
+    h2 {
+        color: $gris;
+        @include font1();
+        font-size: 6em;
+        text-align: center;
+        padding-top: 12%;
+    }
+}
+
+.contenedorProductos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+    justify-content: space-around;
+    .producto {
+        width: 25%;
+        border: $celeste solid 10px;
+        border-radius: 50px;
+        margin: 2% 0;
+        padding: 2%;
+        padding-bottom: 2%;
+        .imagenProducto {
+            width: 60%;
+            padding: 2%;
+            margin-left: 10%;
+        }
+        .nombreProducto {
+            @include font2();
+            font-size: 1.2em;
+            color: $rosa-fuerte;
+            text-align: center;
+            height: 15%;
+        }
+        .precio {
+            @include font2();
+            font-size: 1.5em;
+            font-weight: 600;
+            text-align: center;
+        }
+        .carrito {
+            margin: 15% 15%;
+            padding: 5%;
+            width: 70%;
+            font-size: 1em;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            background-color: $rosa-fuerte;
+            &:hover {
+                background-color: $celeste;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    padding: 5%;
+    background-color: rgb(128, 126, 126);
+    .contenedor3 {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        a img {
+            height: 100%;
+        }
+        .redesSociales {
+            padding-top: 20%;
+            .titulosfooter {
+                margin-bottom: 2%;
+                @include font2();
+                font-size: 1.2em;
+                color: $gris;
+                border-bottom: $gris solid 3px;
+            }
+            .instagram {
+                display: flex;
+                padding-bottom: 5%;
+                padding-top: 2%;
+                a {
+                    width: 20%;
+                    height: 80%;
+                    img {
+                        width: 50%;
+                    }
+                }
+                p {
+                    @include font2();
+                    font-size: 1em;
+                    color: $gris;
+                    
+                }
+            }
+            .facebook {
+                display: flex;
+                padding-bottom: 5%;
+                a {
+                    width: 20%;
+                    height: 50%;
+                    img {
+                        width: 50%;
+                    }
+                }
+                p {
+                    @include font2();
+                    font-size: 1em;
+                    color: $gris;
+                }
+            }
+            .twitter {
+                display: flex;
+                padding-bottom: 5%;
+                a {
+                    width: 20%;
+                    height: 50%;
+                    img {
+                        width: 50%;
+                    }
+                }
+                p {
+                    @include font2();
+                    font-size: 1em;
+                    color: $gris;
+                }
+            }
+        }     
+    }
+    .linksRapidos {
+        width: 30%;
+        .link {
+            display: block;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 600;
+            padding: 4% 8%;
+            a {
+                text-decoration: none;
+                @include font2();
+                color: $gris;
+                &:hover {
+                    font-weight: 700;
+                    color: $gris;
+                    border-bottom: $gris solid 3px;
+                }
+            }
+        }
+    }
+    .location {
+        width: 30%;
+        .titulosfooter {
+            margin-bottom: 2%;
+            @include font2();
+            font-size: 1.2em;
+            color: $gris;
+            border-bottom: $gris solid 3px;
+        }
+        .locacion {
+            display: flex;
+            width: 100%;
+            padding-bottom: 5%;
+            img {
+                width: 7%;
+                height: 7%;
+                padding-right: 10%;
+                padding-top: 2%;
+            }
+            p {
+                width: 80%;
+                @include font2();
+                font-size: 1em;
+                color: $gris;
+            }  
+        }
+        .whatsup {
+            display: flex;
+            padding-top: 2%;
+            img {
+                padding-right: 10%;
+                width: 10%;
+            }
+            p {
+                @include font2();
+                font-size: 1em;
+                color: $gris;
+                padding-top: 2%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    header {
+        nav {
+            ul {
+                .NavList {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        nav {
+            ul {
+                .NavList {
+                    font-size: 1em;
+                    padding: 1% 1%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        nav {
+            ul {
+                li {
+                    font-size: 1em;
+                    padding: 1% 4%;
+                }
+            }
+        }
+    }
+    footer {
+        .contenedor3 {
+            a {
+                img {
+                    height: 80%;
+                }
+            }
+            .redesSociales {
+                .instagram, .facebook, .twitter {
+                    a {
+                        img {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+        .location {
+            .locacion {
+                img {
+                    width: 10%;
+                }
+            }
+            .whatsup {
+                img {
+                    width: 12%;
+                    height: 12%;
+                }
+            }
+        }
+    }
+    .flyer {
+        height: 200px;
+        h2 {
+            font-size: 3em;
+            padding-top: 10%;
+        }
+    }
+    .contenedorProductos {
+        .producto {
+            .nombreProducto {
+                font-size: 1em;
+            }
+            .precio {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        display: inline-block;
+    }
+    nav {
+        display: none;
+    }
+    .flyer {
+        height: 100px;
+        border-radius: 30px;
+        h2 {
+            font-size: 2em;
+            padding-top: 7%;
+        }
+    }
+    .contenedorProductos {
+        .producto {
+            width: 70%;
+            border: 7px solid $celeste;
+            padding-bottom: 5%;
+            .imagenProducto {
+                width: 80%;
+                margin-left: 3%;
+                padding: 2% 5%;
+
+            }
+            .nombreProducto {
+                font-size: 1em;
+                height: 10%;
+            }
+            .precio {
+                font-size: 1.5em;
+            }
+            .carrito {
+                font-size: 1em;
+            }
+        }
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        .contenedor3 {
+            width: 60%;
+            .redesSociales {
+                padding-top: 3%;
+                .titulosfooter {
+                    display: none;
+                }
+                .instagram {
+                    p {
+                        font-size: 0.8em;
+                    }
+                    a {
+                        width: 15%;
+                        padding-left: 0;
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+                .facebook {
+                    p {
+                        font-size: 0.8em;
+                    }
+                    a {
+                        width: 15%;
+                        padding-left: 0;
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+                .twitter {
+                    p {
+                        font-size: 0.8em;
+                    }
+                    a {
+                        width: 15%;
+                        padding-left: 0;
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .linksRapidos {
+            width: 31%;
+            .link {
+                padding: 10% 0;
+            }
+        }
+        .location {
+            width: 95%;
+            .titulosfooter {
+                font-size: 1em;
+            }
+            .locacion {
+                padding-bottom: 0;
+                img {
+                    width: 4%;
+                    padding-right: 7%;
+                    padding-top: 0;
+                    padding-bottom: 2%;
+                }
+                p {
+                    font-size: 0.8em;
+                }
+            }
+            .whatsup {
+                img {
+                    width: 6%;
+                    padding-right: 5%;
+                }
+                p {
+                    font-size: 0.8em;
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}

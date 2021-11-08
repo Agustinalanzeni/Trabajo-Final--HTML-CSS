@@ -178,7 +178,6 @@ ul li a:hover {
   width: 30%;
   padding: 2%;
   font-size: 1.2em;
-  color: #F8F7F5;
   background-color: black;
   border: none;
 }
@@ -187,6 +186,11 @@ ul li a:hover {
   cursor: pointer;
   background-color: #eccc91;
   color: black;
+}
+
+.categorias .skincare button a {
+  text-decoration: none;
+  color: #F8F7F5;
 }
 
 .categorias .makeup {
@@ -237,7 +241,6 @@ ul li a:hover {
   width: 30%;
   padding: 2%;
   font-size: 1.2em;
-  color: #F8F7F5;
   background-color: black;
   border: none;
 }
@@ -246,6 +249,11 @@ ul li a:hover {
   cursor: pointer;
   background-color: #eccc91;
   color: black;
+}
+
+.categorias .makeup button a {
+  text-decoration: none;
+  color: #F8F7F5;
 }
 
 .contenedor {
@@ -296,6 +304,11 @@ ul li a:hover {
 .contenedor .productosDestacados .producto button:hover {
   background-color: #F2A391;
   color: #F8F7F5;
+}
+
+.contenedor .productosDestacados .producto button a {
+  text-decoration: none;
+  color: black;
 }
 
 .contenedor .cajapequeña {
@@ -450,11 +463,23 @@ ul li a:hover {
   padding: 1%;
   font-family: 'Jost', sans-serif;
   font-size: 1.5em;
-  color: #F8F7F5;
   text-align: center;
   background-color: black;
   border: none;
   cursor: pointer;
+}
+
+.ofertas .botonbanner:hover {
+  background-color: #F8F7F5;
+}
+
+.ofertas .botonbanner a {
+  text-decoration: none;
+  color: #F8F7F5;
+}
+
+.ofertas .botonbanner a:hover {
+  color: black;
 }
 
 footer {
@@ -638,6 +663,12 @@ footer .location .whatsup p {
   font-size: 1em;
   color: #F8F7F5;
   padding-top: 2%;
+}
+
+@media (max-width: 1440px) {
+  header nav ul li {
+    font-size: 1.5em;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -853,12 +884,13 @@ footer .location .whatsup p {
   }
   .contenedorFlex .productosDestacados2 .producto2 {
     width: 40%;
-    margin: 0 2%;
+    margin-left: 6%;
     padding: 2%;
   }
   .contenedorFlex .productosDestacados2 .producto2 .imagenproducto2 {
-    width: 100%;
+    width: 70%;
     border: #F2DBCE 10px solid;
+    margin: 0 2%;
   }
   .contenedorFlex .productosDestacados2 .producto2 .nombreProducto2 {
     padding: 3% 0;
@@ -891,8 +923,8 @@ footer .location .whatsup p {
   }
   .contenedorFlex .cajapequeña2 .imagenModelo2 {
     border: #F8F7F5 solid 10px;
-    width: 70%;
-    margin: 5% 13%;
+    width: 50%;
+    margin: 5% 23%;
   }
   .ofertas .textos .titulobanner {
     font-size: 2em;

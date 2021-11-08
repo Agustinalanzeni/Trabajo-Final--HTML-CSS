@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@300;500;600&family=Lexend+Deca:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  display: none;
+}
+
+header {
+  background-color: #CEF2DE;
+  margin: 0%;
+}
+
+.logo {
+  width: 40%;
+  display: block;
+  margin: auto;
+  padding-top: 2%;
+}
+
+.menu {
+  width: 90%;
+  position: relative;
+  display: none;
+  margin-left: auto;
+}
+
+.menu i {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  color: #F2A391;
+}
+
+.menu .dropdown {
+  display: none;
+  width: 30%;
+  position: absolute;
+  background-color: #F2DBCE;
+  padding: 25px 16px;
+  z-index: 5;
+  top: -40px;
+  right: -3px;
+}
+
+.menu .dropdown li {
+  display: block;
+  padding: 7% 0;
+}
+
+.menu:hover .dropdown {
+  display: block;
+}
+
+ul {
+  text-align: center;
+  margin-top: 2%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  background-color: #F2DBCE;
+}
+
+ul li {
+  display: inline;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 1% 8%;
+}
+
+ul li a {
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  color: #777777;
+}
+
+ul li a:hover {
+  font-weight: 700;
+  color: black;
+  border-bottom: black solid 3px;
+}
+
+.flyer {
+  background-color: #F2A391;
+  height: 400px;
+  margin: 5% 7%;
+  border-radius: 50px;
+}
+
+.flyer h2 {
+  color: #F8F7F5;
+  font-family: 'DM Serif Display', serif;
+  font-size: 6em;
+  text-align: center;
+  padding-top: 12%;
+}
+
+.contenedorProductos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 5%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contenedorProductos .producto {
+  width: 25%;
+  border: #CEF2DE solid 10px;
+  border-radius: 50px;
+  margin: 2% 0;
+  padding: 2%;
+}
+
+.contenedorProductos .producto .imagenProducto {
+  width: 60%;
+  padding: 2%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.contenedorProductos .producto .nombreProducto {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2em;
+  color: #F2A391;
+  text-align: center;
+  height: 15%;
+}
+
+.contenedorProductos .producto .precio {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contenedorProductos .producto .carrito {
+  margin: 15% 15%;
+  padding: 5%;
+  width: 70%;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #F2A391;
+}
+
+.contenedorProductos .producto .carrito:hover {
+  background-color: #CEF2DE;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 5%;
+  padding: 5%;
+  background-color: #807e7e;
+}
+
+footer .contenedor3 {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .contenedor3 a img {
+  height: 100%;
+}
+
+footer .contenedor3 .redesSociales {
+  padding-top: 20%;
+}
+
+footer .contenedor3 .redesSociales .titulosfooter {
+  margin-bottom: 2%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2em;
+  color: #F8F7F5;
+  border-bottom: #F8F7F5 solid 3px;
+}
+
+footer .contenedor3 .redesSociales .instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 5%;
+  padding-top: 2%;
+}
+
+footer .contenedor3 .redesSociales .instagram a {
+  width: 20%;
+  height: 80%;
+}
+
+footer .contenedor3 .redesSociales .instagram a img {
+  width: 50%;
+}
+
+footer .contenedor3 .redesSociales .instagram p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+}
+
+footer .contenedor3 .redesSociales .facebook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 5%;
+}
+
+footer .contenedor3 .redesSociales .facebook a {
+  width: 20%;
+  height: 50%;
+}
+
+footer .contenedor3 .redesSociales .facebook a img {
+  width: 50%;
+}
+
+footer .contenedor3 .redesSociales .facebook p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+}
+
+footer .contenedor3 .redesSociales .twitter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 5%;
+}
+
+footer .contenedor3 .redesSociales .twitter a {
+  width: 20%;
+  height: 50%;
+}
+
+footer .contenedor3 .redesSociales .twitter a img {
+  width: 50%;
+}
+
+footer .contenedor3 .redesSociales .twitter p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+}
+
+footer .linksRapidos {
+  width: 30%;
+}
+
+footer .linksRapidos .link {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 4% 8%;
+}
+
+footer .linksRapidos .link a {
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  color: #F8F7F5;
+}
+
+footer .linksRapidos .link a:hover {
+  font-weight: 700;
+  color: #F8F7F5;
+  border-bottom: #F8F7F5 solid 3px;
+}
+
+footer .location {
+  width: 30%;
+}
+
+footer .location .titulosfooter {
+  margin-bottom: 2%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2em;
+  color: #F8F7F5;
+  border-bottom: #F8F7F5 solid 3px;
+}
+
+footer .location .locacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+footer .location .locacion img {
+  width: 7%;
+  height: 7%;
+  padding-right: 10%;
+  padding-top: 2%;
+}
+
+footer .location .locacion p {
+  width: 80%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+}
+
+footer .location .whatsup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2%;
+}
+
+footer .location .whatsup img {
+  padding-right: 10%;
+  width: 10%;
+}
+
+footer .location .whatsup p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1em;
+  color: #F8F7F5;
+  padding-top: 2%;
+}
+
+@media (max-width: 1440px) {
+  header nav ul li {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 1024px) {
+  header nav ul .NavList {
+    font-size: 1.5em;
+    padding: 1% 7%;
+  }
+  .flyer {
+    height: 300px;
+  }
+  .flyer h2 {
+    padding-top: 10%;
+  }
+  .contenedorProductos .producto .nombreProducto {
+    font-size: 1.5em;
+  }
+  .contenedorProductos .producto .precio {
+    font-size: 1.5em;
+  }
+  .contenedorProductos .producto .carrito {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav ul li {
+    font-size: 1em;
+    padding: 1% 4%;
+  }
+  footer .contenedor3 a img {
+    height: 80%;
+  }
+  footer .contenedor3 .redesSociales .instagram a img, footer .contenedor3 .redesSociales .facebook a img, footer .contenedor3 .redesSociales .twitter a img {
+    width: 70%;
+  }
+  footer .location .locacion img {
+    width: 10%;
+  }
+  footer .location .whatsup img {
+    width: 12%;
+    height: 12%;
+  }
+  .flyer {
+    height: 200px;
+  }
+  .flyer h2 {
+    font-size: 3em;
+    padding-top: 10%;
+  }
+  .contenedorProductos .producto .nombreProducto {
+    font-size: 1em;
+  }
+  .contenedorProductos .producto .precio {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    display: inline-block;
+  }
+  nav {
+    display: none;
+  }
+  .flyer {
+    height: 100px;
+    border-radius: 30px;
+  }
+  .flyer h2 {
+    font-size: 2em;
+    padding-top: 7%;
+  }
+  .contenedorProductos .producto {
+    width: 70%;
+    border: 7px solid #CEF2DE;
+    padding-bottom: 5%;
+  }
+  .contenedorProductos .producto .imagenProducto {
+    width: 80%;
+    margin-left: 3%;
+    padding: 2% 5%;
+  }
+  .contenedorProductos .producto .nombreProducto {
+    font-size: 1em;
+    height: 10%;
+  }
+  .contenedorProductos .producto .precio {
+    font-size: 1.5em;
+  }
+  .contenedorProductos .producto .carrito {
+    font-size: 1em;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .contenedor3 {
+    width: 60%;
+  }
+  footer .contenedor3 .redesSociales {
+    padding-top: 3%;
+  }
+  footer .contenedor3 .redesSociales .titulosfooter {
+    display: none;
+  }
+  footer .contenedor3 .redesSociales .instagram p {
+    font-size: 0.8em;
+  }
+  footer .contenedor3 .redesSociales .instagram a {
+    width: 15%;
+    padding-left: 0;
+  }
+  footer .contenedor3 .redesSociales .instagram a img {
+    width: 50%;
+  }
+  footer .contenedor3 .redesSociales .facebook p {
+    font-size: 0.8em;
+  }
+  footer .contenedor3 .redesSociales .facebook a {
+    width: 15%;
+    padding-left: 0;
+  }
+  footer .contenedor3 .redesSociales .facebook a img {
+    width: 50%;
+  }
+  footer .contenedor3 .redesSociales .twitter p {
+    font-size: 0.8em;
+  }
+  footer .contenedor3 .redesSociales .twitter a {
+    width: 15%;
+    padding-left: 0;
+  }
+  footer .contenedor3 .redesSociales .twitter a img {
+    width: 50%;
+  }
+  footer .linksRapidos {
+    width: 31%;
+  }
+  footer .linksRapidos .link {
+    padding: 10% 0;
+  }
+  footer .location {
+    width: 95%;
+  }
+  footer .location .titulosfooter {
+    font-size: 1em;
+  }
+  footer .location .locacion {
+    padding-bottom: 0;
+  }
+  footer .location .locacion img {
+    width: 4%;
+    padding-right: 7%;
+    padding-top: 0;
+    padding-bottom: 2%;
+  }
+  footer .location .locacion p {
+    font-size: 0.8em;
+  }
+  footer .location .whatsup img {
+    width: 6%;
+    padding-right: 5%;
+  }
+  footer .location .whatsup p {
+    font-size: 0.8em;
+    padding-top: 0;
+  }
+}
+/*# sourceMappingURL=style3.css.map */
