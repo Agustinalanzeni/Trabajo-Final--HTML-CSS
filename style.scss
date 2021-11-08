@@ -575,6 +575,18 @@ footer {
             }
         }
     }
+    .categorias {
+        .skincare {
+            p {
+                font-size: 1.5em;
+            }
+        }
+        .makeup {
+            p {
+                font-size: 1.5em;
+            }
+        }
+    }
 }
 
 @media (max-width: 1024px) {
@@ -712,6 +724,9 @@ footer {
                 }
                 button {
                     margin-left: 5%;
+                    a {
+                        text-decoration: none;
+                    }
                 }
             }
         }
@@ -860,7 +875,10 @@ footer {
                     font-size: 1em;
                     &:hover {
                         background-color: $rosa-fuerte;
-                        color: $gris;
+                    }
+                    a {
+                        color: gray;
+                        text-decoration: none;
                     }
                 } 
             }
